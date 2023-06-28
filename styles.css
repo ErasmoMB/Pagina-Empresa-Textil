@@ -1,0 +1,413 @@
+/*General*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --very-light-pink: #c7c7c7;
+  --text-input-field: #f7f7f7;
+  --hospital-green: #acd9b2;
+  --font-lora: "Lora", serif;
+  --sm: 1.4rem;
+  --md: 1.6rem;
+  --lg: 1.8rem;
+}
+body {
+  font-family: "Quicksand", sans-serif;
+  background-color: #e1ede3;
+  font-size: var(--sm);
+}
+.inactive {
+  display: none;
+}
+/* Icono de Whatsapp flotante*/
+.btn-wsp {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  line-height: 63px;
+  bottom: 25px;
+  right: 25px;
+  background: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 35px;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  transition: all 300ms ease;
+}
+.btn-wsp:hover {
+  background: #20ba5a;
+}
+
+/*Navbar (general)*/
+header {
+  width: 100%;
+  min-width: 320px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 60px;
+  align-items: center;
+  background-color: #101510;
+}
+nav {
+  display: flex;
+}
+.menu {
+  display: none;
+}
+.navbar {
+  display: flex;
+}
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  height: 60px;
+}
+.logo-header {
+  font-family: "Kaushan Script", cursive;
+  font-size: 2.5rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  line-height: 30px;
+  padding: 15px 0;
+}
+.logo-header a {
+  text-decoration: none;
+  display: contents;
+}
+.logo-header h1 {
+  color: #e69133;
+}
+.logo-header p {
+  font-size: 1.4rem;
+  color: #ffffff;
+}
+.navbar ul li {
+  margin-left: 20px;
+}
+.navbar ul li a {
+  text-decoration: none;
+  color: var(--very-light-pink);
+  border: 1px solid var(--white);
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 1.5rem;
+}
+.navbar ul li a:hover {
+  border: 1px solid var(--hospital-green);
+  color: rgb(164, 144, 144);
+}
+
+/* Banner con Slider*/
+.container {
+  width: 100%;
+  min-width: 320px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.swiper {
+  width: 100%;
+  height: 500px;
+}
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Informacion */
+.information {
+  padding: 10px;
+}
+.title {
+  padding-top: 50px;
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: 4rem;
+  font-family: var(--font-lora);
+  font-weight: bold;
+}
+.information__container {
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+.description {
+  max-width: 800px;
+  height: auto;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  line-height: 40px;
+  font-size: 2.5rem;
+}
+.description ul {
+  width: 100%;
+}
+.description li {
+  margin-bottom: 20px;
+}
+/* Tipos de acabados */
+.finishing-types {
+  width: 100%;
+}
+.finishing-types__title {
+  text-align: center;
+}
+.finishing-types__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  height: 300px;
+  margin: 40px;
+  box-shadow: 5px 5px 20px black;
+  overflow: hidden;
+  position: relative;
+}
+.card img {
+  height: 300px;
+  width: 250px;
+  border-radius: 3px;
+  transition: 0.5s;
+  object-fit: cover;
+}
+.card .intro {
+  height: 70px;
+  width: 250px;
+  padding: 6px;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  background: rgb(27, 27, 27, 0.5);
+  color: white;
+  transition: 0.5s;
+}
+.card h1 {
+  margin: 10px;
+  font-size: 20px;
+}
+.card p {
+  font-size: 15px;
+  margin: 20px;
+  visibility: hidden;
+  opacity: 0;
+}
+.card span {
+  font-weight: bold;
+}
+.card:hover {
+  cursor: pointer;
+}
+.card:hover .intro {
+  height: 220px;
+  bottom: 0px;
+  background: black;
+}
+.card:hover p {
+  opacity: 1;
+  visibility: visible;
+}
+.card:hover img {
+  transform: scale(1.1) rotate(-3deg);
+}
+
+/*Pasos para el estampado*/
+.steps-for-stamping {
+  width: 100%;
+}
+.title-secondary {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: var(--font-lora);
+  font-weight: bold;
+}
+.steps-for-stamping__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.step-card {
+  width: 400px;
+  background-color: #f2dba5;
+  margin: 20px 20px;
+  display: flex;
+  padding: 15px;
+  align-items: center;
+  border-radius: 8px;
+}
+.step-card:nth-child(1) {
+  flex-direction: row-reverse;
+  text-align: end;
+}
+.step-card:nth-child(2) {
+  flex-direction: row-reverse;
+  text-align: end;
+}
+.step-card .img {
+  width: 50%;
+}
+.step-card img {
+  width: 100%;
+}
+.card-text {
+  width: 100%;
+}
+.card-text h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.card-text p {
+  line-height: 18px;
+}
+
+/* Footer */
+footer {
+  background-color: #101510;
+  color: #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  min-width: 320px;
+  height: auto;
+  margin-top: 30px;
+}
+footer div {
+  width: 200px;
+  height: 150px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo-footer {
+  font-family: "Kaushan Script", cursive;
+  font-size: 2.5rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  line-height: 30px;
+  padding: 15px 0;
+}
+.logo-footer a {
+  text-decoration: none;
+  display: contents;
+}
+.logo-footer h1 {
+  color: #e69133;
+}
+.logo-footer p {
+  font-size: 1.4rem;
+  color: #ffffff;
+}
+.pages-links {
+  text-align: left;
+  line-height: 20px;
+}
+.pages-links li {
+  list-style: none;
+}
+.pages-links a {
+  text-decoration: none;
+  color: #ffffff;
+  line-height: 40px;
+}
+.contact {
+  flex-direction: column;
+}
+.contact h2 {
+  margin-bottom: 10px;
+}
+.contact li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.social-networks a {
+  margin: 5px;
+}
+.contact li:nth-child(3) {
+  margin-top: 10px;
+  justify-content: center;
+}
+.contact img {
+  width: 25px;
+  margin: 5px;
+}
+.contact a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+@media (max-width: 320px) {
+  .step-card {
+    flex-direction: column-reverse;
+    margin: 10px;
+  }
+  .step-card:nth-child(1) {
+    flex-direction: column-reverse;
+    text-align: left;
+  }
+  .step-card:nth-child(2) {
+    flex-direction: column-reverse;
+    text-align: left;
+  }
+}
+@media (max-width: 425px) {
+  .description {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin: 0 auto;
+  }
+  .title {
+    font-size: 3rem;
+  }
+  .title-secondary {
+    font-size: 2rem;
+  }
+  .information__container {
+    margin: 0 20px;
+  }
+}
+@media (max-width: 530px) {
+  header {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  .information__container {
+    flex-wrap: wrap;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .btn-wsp {
+    width: 63px;
+    height: 63px;
+    line-height: 66px;
+  }
+}

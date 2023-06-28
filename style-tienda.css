@@ -1,0 +1,60 @@
+@import url("styles.css");
+/* Banner de productos*/
+.text-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  background-color: rgb(65, 2, 2);
+  overflow: hidden;
+}
+.text-wrapper h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke-width: 0.3px;
+  -webkit-text-stroke-color: #ffffff;
+  white-space: nowrap;
+  padding: 1rem;
+  letter-spacing: 1px;
+  animation: move-rtl 50000ms linear infinite;
+}
+
+/* Efecto de la galeria */
+.container {
+  width: 100%;
+  display: block;
+}
+.galeria {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.galeria .col {
+  margin: 40px 20px;
+}
+.title {
+  font-size: 4rem;
+  letter-spacing: 3px;
+}
+.galeria img {
+  width: 300px;
+  height: 300px;
+  box-shadow: 0 8px 10px -4px rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+  object-fit: cover;
+}
+#materialbox-overlay {
+  width: 0px !important;
+  height: 0px !important;
+}
+
+@keyframes move-rtl {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
